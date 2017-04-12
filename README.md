@@ -15,7 +15,7 @@
       var _clockwise = {
         host: 'www.clockwisemd.com',
         group_id: <GROUP_ID>,
-        token: <API_ACCESS_TOKE>,
+        token: <API_ACCESS_TOKEN>,
         filters: ["reasons", "location", "physician"],
         showHeader: true
       };
