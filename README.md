@@ -24,7 +24,7 @@ page. It will include your Api Access key in the `token` field.
 ---
 
 ## Demonstration
-[Click here to see the example](http://lightshedhealth.github.io/Embedded-Scheduling/)
+[Click here to see the example](https://examples.clockwisemd.com/Embedded-Scheduling/)
 
 ---
 
