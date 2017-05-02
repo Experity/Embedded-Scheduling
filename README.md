@@ -10,6 +10,9 @@ Replace the `<GROUP_ID>` in both places with your group ID.
 
 Replace the `<API_ACCESS_TOKEN>` with your Api Access key.
 
+Replace the `<CONTAINER_ID>` with the `id` of the html div in which you would like
+to render the widget. _* Remove all styling to this div for best results._
+
 If you don't know your Api Access key, it can be found by going to the
 settings page of any hospital in your group. Once you are at this page, click
 on the `Scheduled Care` link and click the `Scheduled Care Off` button. This
@@ -38,7 +41,8 @@ page. It will include your Api Access key in the `token` field.
         group_id: <GROUP_ID>,
         token: <API_ACCESS_TOKEN>,
         filters: ["reasons", "location", "physician"],
-        showHeader: true
+        showHeader: false,
+        containerId: <CONTAINER_ID>
       };
     </script>
     <script src="//www.clockwisemd.com/groups/<GROUP_ID>/schedule.js"></script>
