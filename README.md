@@ -57,7 +57,7 @@ You can add the following options to your `_clockwise` config object for more
 fine-grained control.
 
 ```
-'appointmentQueueId (default none)'     // Restricts scheduled care to one queue
+'scheduledProviderId (default none)'     // Restricts scheduled care to one Scheduled Provider
 'includeClockwiseStyles (default true)' // Set to `false` if you'd like to
 style the HTML yourself.
 'showProviderInfo (default true)'       // When set to `false`, provider image,
@@ -70,7 +70,7 @@ Ex.
 
 var _clockwise = {
   ... same as above ...
-  appointmentQueueId: <APPOINTMENT_QUEUE_ID>,
+  scheduledProviderId: <SCHEDULED_PROVIDER_ID>,
   includeClockwiseStyles: false,
   showProviderInfo: false,
   numVisibleDays: 3
