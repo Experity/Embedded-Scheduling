@@ -42,6 +42,7 @@ page. It will include your Api Access key in the `token` field.
         token: <API_ACCESS_TOKEN>,
         filters: ["reasons", "location", "physician"],
         showHeader: false,
+        showFooter: false,
         containerId: <CONTAINER_ID>
       };
     </script>
@@ -49,4 +50,86 @@ page. It will include your Api Access key in the `token` field.
   </head>
   <body></body>
 </html>
+```
+
+## Advanced Options
+You can add the following options to your `_clockwise` config object for more
+fine-grained control.
+
+```
+'scheduledProviderId (default none)'     // Restricts scheduled care to one Scheduled Provider
+'includeClockwiseStyles (default true)' // Set to `false` if you'd like to
+style the HTML yourself.
+'showProviderInfo (default true)'       // When set to `false`, provider image,
+bio, and profile link, will not be rendered.
+'numVisibleDays (default 7)'            // Number of days in the schedule to show
+at a time. Note: This value is dynamically changed on smaller screens (iPad,
+iPhone, etc).
+
+Ex.
+
+var _clockwise = {
+  ... same as above ...
+  scheduledProviderId: <SCHEDULED_PROVIDER_ID>,
+  includeClockwiseStyles: false,
+  showProviderInfo: false,
+  numVisibleDays: 3
+}
+```
+
+---
+
+## Basic CSS
+Here are some basic styles to get you started if choose not to include clockwise
+styles.
+
+```css
+<style>
+.provider-time {
+  border: 1px solid #5395c3;
+  color: #5395c3;
+  padding: 5px;
+  margin: 5px;
+  display: block;
+  text-decoration: none;
+}
+.provider-schedule {
+  display: inline-block;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #b0b0b0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.provider-day-schedule {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  min-width: 116px;
+}
+.scrollable-times {
+  height: 230px;
+  overflow-y: auto;
+  padding: 0 5px;
+}
+.day-change-btn {
+  padding: 6px 10px 8px 10px;
+  margin: 5px;
+  border-radius: 4px;
+  background: rgba(211, 211, 211, 0.49);
+  border: 1px solid #b0b0b0;
+  font-size: 15px;
+  color: grey;
+}
+
+.day-change-btn.active:hover {
+  cursor: pointer;
+  background: lightgrey;
+}
+
+.day-change-btn.inactive {
+  opacity: 0.3;
+}
+</style>
 ```
